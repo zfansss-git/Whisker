@@ -25,7 +25,7 @@ jobs:
       run: dotnet restore Whisker.sln # <<--- 关键修改：改为您的解决方案文件名
 
     - name: Publish Application
-      run: dotnet publish /Whisker/Whisker.csproj -c Release -o ./publish --no-self-contained
+      run: dotnet publish Whisker/Whisker.csproj -c Release -o ./publish --no-self-contained
       # -c Release: 使用 Release 配置进行构建（性能更好）
       # -o ./publish: 输出到当前目录下的 'publish' 文件夹
       # --no-self-contained: 生成依赖系统运行时的框架依赖型应用，体积更小
