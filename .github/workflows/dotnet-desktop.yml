@@ -22,7 +22,7 @@ jobs:
           6.0.x
 
     - name: Restore dependencies
-      run: dotnet restore Whisker.sln # <<--- 关键修改：改为您的解决方案文件名
+      run: dotnet restore /Whisker/Whisker.sln # <<--- 关键修改：改为您的解决方案文件名
 
     - name: Publish Application
       run: dotnet publish Whisker.csproj -c Release -o ./publish --no-self-contained
